@@ -14,9 +14,9 @@ jobs:
       - name: Install prerequisites
         run: |
           sudo apt-get update
-          sudo apt-get install -y git quilt parted realpath qemu-user-static debootstrap zerofree \
-            pxz zip dosfstools bsdtar libcap2-bin grep rsync xz-utils bc \
-            coreutils systemd-container pigz
+          sudo apt-get install -y git coreutils quilt parted qemu-user-static debootstrap zerofree zip \
+            dosfstools libarchive-tools libcap2-bin grep rsync xz-utils file git curl bc \
+            gpg pigz xxd arch-test bmap-tools
 
       - name: Build image
         run: |
